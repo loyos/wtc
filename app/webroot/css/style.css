@@ -21,11 +21,122 @@
 	padding:0;
 }
 
-/** General Style Info **/
-body {
-	background: #003d4c;
-	color: #fff;
-	font-family:'lucida grande',verdana,helvetica,arial,sans-serif;
-	font-size:90%;
-	margin: 0;
+.menu{
+	height: 50px;
+	background: #333;
+	border: 0;
+	padding: 0;
+	z-index: 99999;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
+
+.logo{
+	float: left;
+	margin-top: 13px;
+	margin-left: 100px;
+}
+
+.login{
+	float: right;
+	font-family: 'Architects Daughter', cursive;
+	font-size: 15px;
+	margin-top: 15px;
+	margin-right: 150px;
+	color: #cecaca;
+}
+
+.menu ul{
+	list-style: none;
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	height: 50px;
+	margin-top: 14px;
+}
+
+.menu li{
+	float: left;
+	padding-right: 30px;
+}
+
+.menu li a{
+	text-decoration: none;
+	color: #cecaca;
+	text-transform: uppercase;
+	font-family: 'Architects Daughter', cursive;
+}
+
+.wrap{   /* featured stuff */
+	max-width: 1260px;
+	min-width: 240px;
+	width: auto;
+	margin: auto;
+	padding: 0px 30px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.icon {
+	float: left;
+	padding-right: 15px;
+}
+
+/*-----------------------------------------------------------------------------
+
+MEGAFOLIO RESPONSIVE BASIC STYLES OF HTML DOCUMENT
+
+Screen Stylesheet
+
+version:   	1.0
+date:      	26/06/12
+author:		themepunch
+email:     	support@themepunch.com
+website:   	http://www.themepunch.com
+-----------------------------------------------------------------------------*/
+
+
+
+
+/***********************
+	-	BASICS 	-
+***********************/
+
+body {
+/* background-color: #a8b6bd */
+	background-image: url('../img/images/backgrounds/tile1.jpg');
+}
+
+
+
+.container				{	max-width:1260px; min-width:240px; width:auto; margin:auto; padding:0px 30px;
+							-moz-box-sizing: border-box;
+							box-sizing: border-box;
+	                   		-webkit-box-sizing: border-box;
+							 overflow: hidden;
+						}
+
+.splash-white			{	width:100%;padding:45px 0px;
+							 background:#fff;
+							 position:relative;
+						}
+
+.container-fullwidth	{	width:100%; min-width:240px; width:auto; margin:auto; padding:0px 30px;
+							-moz-box-sizing: border-box;
+							box-sizing: border-box;
+	                   		-webkit-box-sizing: border-box;
+							 overflow: hidden;
+						}
+
+.megafolio-container,
+.megafolio-container-splash	{	width:100%;  position:relative;
+								-moz-box-sizing: border-box;
+								box-sizing: border-box;
+		                   		-webkit-box-sizing: border-box;
+ 							}
