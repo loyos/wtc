@@ -4,3 +4,5 @@
 
 <?php echo $this->element('featured');  ?>
 
+<?php echo $this->element('carrousel');  ?>
+
