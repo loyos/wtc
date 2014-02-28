@@ -37,9 +37,11 @@
 		echo $this->Html->script('jquery.themepunch.megafoliopro');
 		echo $this->Html->script('jquery.themepunch.plugins.min');
 		echo $this->Html->script('jquery.fancybox.pack');
-		echo $this->Html->script('jcarousellite_1.0.1');
+		echo $this->Html->script('modernizr.custom.79639');
 		echo $this->Html->meta('icon');
 		echo $this->Html->css('style');
+		echo $this->Html->css('common');
+		echo $this->Html->css('style7');
 		echo $this->Html->css('jquery.fancybox');
 		echo $this->Html->css('settings');
 		echo $this->fetch('meta');

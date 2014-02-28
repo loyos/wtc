@@ -1,66 +1,148 @@
 <script>
-$(function() {
-    $("#carousel_pub").jCarouselLite({
-        btnNext: ".next_pub",
-        btnPrev: ".previous_pub",
-		autoCSS: true
-    });
-});
-$(function() {
-    $("#carousel_restaurant").jCarouselLite({
-        btnNext: ".next_restaurant",
-        btnPrev: ".previous_restaurant",
-		autoCSS: true
-    });
-});
-$(".default .jCarouselLite").jCarouselLite({
-    btnNext: ".default .next",
-    btnPrev: ".default .prev"
-});
-$( document ).ready(function() {
-$(".carousel_photo").mouseover(function(){
-  $(this).css("opacity",0.5);
-});
-
-$(".carousel_photo").mouseout(function(){
-  $(this).css("opacity",1);
-});
-});
+$(document).ready(function() {
+	$('.previous_pub').click(function(){
+		$('#carrousel_pub ul').prepend($('#carrousel_pub ul li:last'));
+	});
+	$('.next_pub').click(function(){
+		$('#carrousel_pub ul').append($('#carrousel_pub ul li:first'));
+	});
+	
+	$('.previous_rest').click(function(){
+		$('#carrousel_rest ul').prepend($('#carrousel_rest ul li:last'));
+	});
+	$('.next_rest').click(function(){
+		$('#carrousel_rest ul').append($('#carrousel_rest ul li:first'));
+	});
+})
 </script>
 <div class = "wrap">
 <div class = "carousel">
 <span>Pub<br></span>
 <a class="previous previous_pub"></a>
-<div id="carousel_pub">
-    <ul>
-        <li style="padding:4px;" ><div style="background:#841B78; padding:10px;" class="carousel_photo"><?php echo $this->Html->image('images/1.jpg',array('width' => '130px','height' => '140px'))?></div></li>
-        <li style="padding:4px;"><div style="background:#841B78; padding:10px;" class="carousel_photo"><?php echo $this->Html->image('images/2.jpg',array('width' => '130px','height' => '140px'))?></li>
-        <li style="padding:4px;"><div style="background:#841B78; padding:10px;" class="carousel_photo"><?php echo $this->Html->image('images/3.jpg',array('width' => '130px','height' => '140px'))?></li>
-        <li style="padding:4px;"><div style="background:#841B78; padding:10px;" class="carousel_photo"><?php echo $this->Html->image('images/4.jpg',array('width' => '130px','height' => '140px'))?></li>
-		 <li style="padding:4px;"><div style="background:#841B78; padding:10px;" class="carousel_photo"><?php echo $this->Html->image('images/6.jpg',array('width' => '130px','height' => '140px'))?></li>
-		 <li style="padding:4px;"><div style="background:#841B78; padding:10px;" class="carousel_photo"><?php echo $this->Html->image('images/7.jpg',array('width' => '130px','height' => '140px'))?></li>
-		 <li style="padding:4px;"><div style="background:#841B78; padding:10px;" class="carousel_photo"><?php echo $this->Html->image('images/16.jpg',array('width' => '130px','height' => '140px'))?></li>
-		  <li style="padding:4px;"><div style="background:#841B78; padding:10px;" class="carousel_photo"><?php echo $this->Html->image('images/17.jpg',array('width' => '130px','height' => '140px'))?></li>
-    </ul>
-	
+<div id="carrousel_pub">
+    <ul class="ch-grid">
+		<li>
+			<div class="ch-item">				
+				<div class="ch-info">
+					<div class="ch-info-front" style='background-image:url("img/images/pub.jpg"); background-repeat:no-repeat; background-size: cover;'></div>
+					<div class="ch-info-back">
+						<h3>Temple bar</h3>
+					</div>	
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="ch-item">				
+				<div class="ch-info">
+					<div class="ch-info-front" style='background-image:url("img/images/live.jpg"); background-repeat: no-repeat; background-size: cover;'></div>
+					<div class="ch-info-back">
+						<h3>Legends</h3>
+					</div>	
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="ch-item">				
+				<div class="ch-info">
+					<div class="ch-info-front" style='background-image:url("img/images/salads.jpg"); background-repeat: no-repeat; background-size: cover;'></div>
+					<div class="ch-info-back">
+						<h3>Xs cosa</h3>
+					</div>	
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="ch-item">
+				<div class="ch-info">
+					<div class="ch-info-front" style='background-image:url("img/images/beer.jpg"); background-repeat: no-repeat; background-size: cover;'></div>
+					<div class="ch-info-back">
+						<h3>You</h3>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="ch-item">
+			<div class="ch-info">
+					<div class="ch-info-front" style='background-image:url("img/images/nightlife.jpg"); background-repeat: no-repeat; background-size: cover;'></div>
+					<div class="ch-info-back">
+						<h3>Love</h3>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
 </div>
 <a class="next next_pub"></a>
 </div>
+<hr></hr>
 <div class = "carousel">
 <span>Restaurants<br></span>
-<a class="previous previous_restaurant"></a>
-<div id="carousel_restaurant">
-    <ul>
-        <li style="padding:4px;"><div style="background:#841B78; padding:10px;" class="carousel_photo"><?php echo $this->Html->image('images/9.jpg',array('width' => '130px','height' => '140px'))?></div></li>
-        <li style="padding:4px;"><div style="background:#841B78; padding:10px;" class="carousel_photo"><?php echo $this->Html->image('images/10.jpg',array('width' => '130px','height' => '140px'))?></li>
-        <li style="padding:4px;"><div style="background:#841B78; padding:10px;" class="carousel_photo"><?php echo $this->Html->image('images/11.jpg',array('width' => '130px','height' => '140px'))?></li>
-        <li style="padding:4px;"><div style="background:#841B78; padding:10px;" class="carousel_photo"><?php echo $this->Html->image('images/12.jpg',array('width' => '130px','height' => '140px'))?></li>
-		 <li style="padding:4px;"><div style="background:#841B78; padding:10px;" class="carousel_photo"><?php echo $this->Html->image('images/13.jpg',array('width' => '130px','height' => '140px'))?></li>
-		 <li style="padding:4px;"><div style="background:#841B78; padding:10px;" class="carousel_photo"><?php echo $this->Html->image('images/14.jpg',array('width' => '130px','height' => '140px'))?></li>
-		 <li style="padding:4px;"><div style="background:#841B78; padding:10px;" class="carousel_photo"><?php echo $this->Html->image('images/15.jpg',array('width' => '130px','height' => '140px'))?></li>
-		  <li style="padding:4px;"><div style="background:#841B78; padding:10px;" class="carousel_photo"><?php echo $this->Html->image('images/16.jpg',array('width' => '130px','height' => '140px'))?></li>
-    </ul>	
+<a class="previous previous_rest"></a>
+<div id="carrousel_rest">
+    <ul class="ch-grid">
+		<li>
+			<div class="ch-item">				
+				<div class="ch-info" style='border-radius:0%'>
+					<div class="ch-info-front" style='background-image:url("img/images/nightlife.jpg"); border-radius:0%; background-repeat: no-repeat; background-size: cover;'></div>
+					<div class="ch-info-back" style='border-radius:0%'>
+						<h3>Temple bar</h3>
+					</div>	
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="ch-item">				
+				<div class="ch-info" style='border-radius:0%'>
+					<div class="ch-info-front" style='background-image:url("img/images/beer.jpg"); border-radius:0%; background-repeat: no-repeat; background-size: cover;'></div>
+					<div class="ch-info-back" style='border-radius:0%'>
+						<h3>Legends</h3>
+					</div>	
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="ch-item">				
+				<div class="ch-info" style='border-radius:0%'>
+					<div class="ch-info-front" style='background-image:url("img/images/salads.jpg");border-radius:0%; background-repeat: no-repeat; background-size: cover;'></div>
+					<div class="ch-info-back" style='border-radius:0%'>
+						<h3>Xs cosa</h3>
+					</div>	
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="ch-item">
+				<div class="ch-info" style='border-radius:0%'>
+					<div class="ch-info-front" style='background-image:url("img/images/4.jpg"); border-radius:0%;background-repeat: no-repeat; background-size: cover;'></div>
+					<div class="ch-info-back" style='border-radius:0%'>
+						<h3>You</h3>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="ch-item">
+			<div class="ch-info">
+					<div class="ch-info-front" style='background-image:url("img/images/pub.jpg"); background-repeat: no-repeat; border-radius:0%; background-size: cover;'></div>
+					<div class="ch-info-back" style='border-radius:0%'>
+						<h3>Love</h3>
+					</div>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="ch-item">
+			<div class="ch-info" style='border-radius:0%'>
+					<div class="ch-info-front" style='background-image:url("img/images/live.jpg"); border-radius:0%; background-size: cover; '></div>
+					<div class="ch-info-back" style='border-radius:0%'>
+						<h3>ksdjks</h3>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
 </div>
-<a class="next next_restaurant"></a>
+<a class="next next_rest"></a>
 </div>
 </div>
